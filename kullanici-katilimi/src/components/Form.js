@@ -99,7 +99,7 @@ const handleSubmit=(e)=>{
         </label>
         <br />
         <label>Email:
-        <input type="text" name="email" placeholder="email giriniz..." onChange={handleChange} value ={uye.email} />
+        <input data-cy="input-mail" type="text" name="email" placeholder="email giriniz..." onChange={handleChange} value ={uye.email} />
        
         </label>
         {formStateErr.email &&(
@@ -113,7 +113,7 @@ const handleSubmit=(e)=>{
         )}
         <br/>
         <label>Şifre:
-        <input type="text" name="password" placeholder="soyisim giriniz..." onChange={handleChange} value ={uye.lastName} />
+        <input data-cy="input-pass" type="text" name="password" placeholder="soyisim giriniz..." onChange={handleChange} value ={uye.lastName} />
         </label>
         <br />
 
@@ -123,12 +123,12 @@ const handleSubmit=(e)=>{
         <br />
 
         <label>Kullanım Koşulları
-        <input type="checkbox" name="terms" onChange={handleChange1} value ={uye.terms} />
+        <input data-cy="input-check" type="checkbox" name="terms" onChange={handleChange1} value ={uye.terms} />
        
       </label> 
       <br />
 
-        <button type="submit" disabled={valid} onChange={()=>setEditId(null)}>
+        <button data-cy="input-button"  type="submit" disabled={valid} onChange={()=>setEditId(null)}>
             Gönder 
         </button>
     </div>
